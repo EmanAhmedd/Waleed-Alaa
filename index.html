@@ -4,12 +4,6 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Invitation</title>
-
-  <!-- Google Fonts -->
-  <!-- <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Playfair+Display:wght@400;700&family=Josefin+Sans:wght@300;400;700&display=swap" rel="stylesheet"> -->
-<!-- <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Playfair+Display:wght@400;700&family=Josefin+Sans:wght@300;400;700&display=swap" rel="stylesheet"> -->
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
@@ -21,7 +15,7 @@
   src: url('https://cdn.jsdelivr.net/npm/@fontsource/cinzel-decorative@4.5.0/files/cinzel-decorative-latin-400-normal.woff2') format('woff2');
   font-weight: 400;
   font-display: swap;
-  unicode-range: U+0000-00FF; /* عشان يحمل أسرع */
+  unicode-range: U+0000-00FF;
 }
 
 @font-face {
@@ -31,6 +25,7 @@
   font-display: swap;
   unicode-range: U+0000-00FF;
 }
+
 /* Playfair Display */
 @font-face {
   font-family: 'Playfair Display';
@@ -77,12 +72,19 @@
 
     *{box-sizing:border-box;margin:0;padding:0}
 
+    html{
+      font-size: 16px;
+      overflow-x: hidden;
+    }
+
     html,body{
       height:100%;
       background:var(--bg);
       font-family:"Josefin Sans", system-ui, Arial;
       -webkit-font-smoothing:antialiased;
       -moz-osx-font-smoothing:grayscale;
+      overflow-x: hidden;
+      width: 100%;
     }
 
     .card{
@@ -100,32 +102,18 @@
       color:var(--cream);
     }
 
-    /* mfargha */
-
-.names{
-  font-family:"Cinzel Decorative", serif;
-  font-size: clamp(48px, 12vw, 88px);
-  letter-spacing: clamp(2px, 1vw, 6px);
-  line-height: 0.9;
-  color: var(--dark); 
-  -webkit-text-fill-color: transparent; 
-  -webkit-text-stroke: 1px var(--dark);
-  margin-bottom: 1.4rem;
-  /* font-display: swap; */
-   size-adjust: 100%; 
-  font-size-adjust: none;
-}
-
-    /* msh mfargha */
-    /* .names {
-    font-family: "Cinzel Decorative", sans-serif; 
-    font-weight: 700;
-    font-size: 88px;
-    letter-spacing: 6px;
-    line-height: 0.9;
-    color: var(--dark);
-    margin-bottom: 1.4rem;
-    } */
+    .names{
+      font-family:"Cinzel Decorative", serif;
+      font-size: clamp(48px, 12vw, 88px);
+      letter-spacing: clamp(2px, 1vw, 6px);
+      line-height: 0.9;
+      color: var(--dark); 
+      -webkit-text-fill-color: transparent; 
+      -webkit-text-stroke: 1px var(--dark);
+      margin-bottom: 1.4rem;
+      size-adjust: 100%; 
+      font-size-adjust: none;
+    }
 
     .intro{
       font-size:18px;
@@ -151,10 +139,9 @@
       height:14px;
       border-radius:50%;
       background:var(--cream);
-      vertical-align:middle;
-      margin:0 12px;
       vertical-align: baseline; 
-       }
+      margin:0 12px;
+    }
 
     .time-place{
       margin-top:28px;
@@ -170,7 +157,6 @@
       text-align: center;
       margin-top: 60px;
       color: var(--cream);
-
     }
 
     .countdown-title {
@@ -193,7 +179,6 @@
     .countdown div p {
       font-family: "Playfair Display", serif;
       margin: 0;
-      
     }
 
     .countdown span {
@@ -202,34 +187,12 @@
       text-transform: uppercase;
       letter-spacing: 3px;
       margin-top: 8px;
-     margin-bottom: 40px;
-
-    }
-
-
-    .countdown h2 {
-      font-size: 40px;
-      margin-bottom: 30px;
-    }
-
-    .timer {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-
-    .time-box {
-      background: rgba(221, 198, 156, 0.24);
-      border-radius: 10px;
-      padding: 15px 25px;
-      font-size: 30px;
+      margin-bottom: 40px;
     }
 
     .location-section {
       margin-top: 60px;
       padding: 40px 0;
-      
     }
 
     .location-title {
@@ -241,6 +204,7 @@
       text-transform: uppercase;
       font-weight: 400;
     }
+
     .location-title i {
       font-size: 25px;  
     }
@@ -253,25 +217,26 @@
       margin: 25px 0;
       border: 2px solid var(--cream);
     }
+
     .map-link {
-    display: inline-block;
-    margin-top: 20px;
-    background: var(--cream); 
-    color: var(--bg); 
-    text-decoration: none;
-    font-size: 16px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    border: 1px solid var(--cream);
-    padding: 12px 30px;
-    border-radius: 25px;
-    transition: all 0.3s ease;
-    font-weight: 300;
+      display: inline-block;
+      margin-top: 20px;
+      background: var(--cream); 
+      color: var(--bg); 
+      text-decoration: none;
+      font-size: 16px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      border: 1px solid var(--cream);
+      padding: 12px 30px;
+      border-radius: 25px;
+      transition: all 0.3s ease;
+      font-weight: 300;
     }
 
     .map-link:hover {
-    background: var(--bg); 
-    color: var(--cream); 
+      background: var(--bg); 
+      color: var(--cream); 
     }
 
     .additional-text {
@@ -284,16 +249,106 @@
       letter-spacing: 1px;
     }
 
-    @media (max-width:520px){
-      .names{font-size:44px; -webkit-text-stroke:1px;}
-      .date{font-size:56px; letter-spacing:6px;}
-      .intro{font-size:14px}
-      .location-title {font-size: 20px; letter-spacing: 4px;}
-      .map-container {height: 250px;}
-      .additional-text {font-size: 16px;}
-      .time-place{font-size:13px; letter-spacing:3px}
-      .countdown{gap:20px; font-size:28px;}
-      .countdown-title{font-size:20px; }
+    @media (max-width:768px){
+      .card{
+        padding: 2rem 1rem;
+      }
+      
+      .names{
+        font-size: clamp(36px, 10vw, 44px);
+        -webkit-text-stroke: 0.8px;
+        letter-spacing: 3px;
+      }
+      
+      .intro{
+        font-size: 14px;
+        letter-spacing: 2px;
+        margin: 24px 0;
+      }
+      
+      .date{
+        font-size: clamp(48px, 15vw, 70px);
+        letter-spacing: 4px;
+        margin: 12px 0;
+      }
+      
+      .dot{
+        width: 10px;
+        height: 10px;
+        margin: 0 8px;
+      }
+      
+      .time-place{
+        font-size: 14px;
+        letter-spacing: 2px;
+        margin-top: 20px;
+      }
+      
+      .countdown-title{
+        font-size: 24px;
+        letter-spacing: 2px;
+      }
+      
+      .countdown{
+        gap: 25px;
+        font-size: 32px;
+      }
+      
+      .countdown span{
+        font-size: 12px;
+        letter-spacing: 2px;
+      }
+      
+      .location-title {
+        font-size: 22px;
+        letter-spacing: 3px;
+      }
+      
+      .location-title i {
+        font-size: 20px;
+      }
+      
+      .map-container {
+        height: 300px;
+      }
+      
+      .additional-text {
+        font-size: 15px;
+        margin: 30px 0;
+      }
+      
+      .map-link{
+        font-size: 13px;
+        padding: 10px 20px;
+        letter-spacing: 2px;
+        margin: 10px 5px;
+      }
+    }
+
+    /* للموبايلات الصغيرة جداً */
+    @media (max-width:400px){
+      .names{
+        font-size: 32px;
+        letter-spacing: 2px;
+      }
+      
+      .date{
+        font-size: 42px;
+        letter-spacing: 3px;
+      }
+      
+      .countdown{
+        gap: 15px;
+        font-size: 24px;
+      }
+      
+      .map-link{
+        font-size: 12px;
+        padding: 8px 15px;
+        display: block;
+        margin: 10px auto;
+        max-width: 200px;
+      }
     }
 
   </style>
@@ -315,19 +370,14 @@
 
       <div class="time-place">
         six o'clock in the evening
-        
       </div>
       <div class="time-place">
-            The Grove  
+        The Grove  
       </div>
-
-     
-
-
 
       <!-- Location Section  -->
       <div class="location-section">
-        <div class="location-title"> <i class="fas fa-map-marker-alt"></i>  Location</div>
+        <div class="location-title"><i class="fas fa-map-marker-alt"></i> Location</div>
         
         <div class="additional-text">
           Join us at The Grove for an unforgettable celebration<br>
@@ -350,40 +400,32 @@
            class="map-link">
           View on Google Maps
         </a>
-          <a onclick="DirectionPage()"
+        <a onclick="DirectionPage()"
            target="_blank" 
            class="map-link">
           Specific Location
         </a>
-       
-
-       
       </div>
 
-
-              <!-- Countdown -->
+      <!-- Countdown -->
       <div class="countdown-section">
         <h2 class="countdown-title">Countdown to the Big Day!</h2>
-        <div class="timer" id="countdown">
-      <div class="time-box" id="days">0d</div>
-      <div class="time-box" id="hours">0h</div>
-      <div class="time-box" id="minutes">0m</div>
-      <div class="time-box" id="seconds">0s</div>
-    </div>
+        <div class="countdown" id="countdown">
+          <div><p id="days">00</p><span>Days</span></div>
+          <div><p id="hours">00</p><span>Hours</span></div>
+          <div><p id="minutes">00</p><span>Minutes</span></div>
+          <div><p id="seconds">00</p><span>Seconds</span></div>
+        </div>
 
-    
         <div class="additional-text">
-        We can't wait to celebrate this special moment with you<br>
-        Your presence is the most valuable gift to us
+          We can't wait to celebrate this special moment with you<br>
+          Your presence is the most valuable gift to us
+        </div>
       </div>
-      </div>
-
 
     </div> 
   </div> 
 
-
-
-  <script src="Main.js"> </script>
+  <script src="Main.js"></script>
 </body>
 </html>

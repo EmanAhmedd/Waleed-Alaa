@@ -1,26 +1,30 @@
-const weddingDate = new Date("Nov 29, 2025 00:00:00").getTime();
+    const weddingDate = new Date("Nov 29, 2025 18:00:00").getTime();
 
-function updateCountdown() {
-  const now = new Date().getTime();
-  const distance = weddingDate - now;
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const distance = weddingDate - now;
 
-  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-  document.getElementById("days").textContent = days + "d";
-  document.getElementById("hours").textContent = hours + "h";
-  document.getElementById("minutes").textContent = minutes + "m";
-  document.getElementById("seconds").textContent = seconds + "s";
-}
+      document.getElementById("days").textContent = days ;
+      document.getElementById("hours").textContent = hours;
+      document.getElementById("minutes").textContent = minutes;
+      document.getElementById("seconds").textContent = seconds ;
+      // document.getElementById("days").textContent = days + "d";
+      // document.getElementById("hours").textContent = hours + "h";
+      // document.getElementById("minutes").textContent = minutes + "m";
+      // document.getElementById("seconds").textContent = seconds + "s";
+    }
 
-// شغله أول مرة على طول
-updateCountdown();
+    // شغله أول مرة على طول
+    updateCountdown();
 
-// بعدين كل ثانية
-setInterval(updateCountdown, 1000);
+    // بعدين كل ثانية
+    setInterval(updateCountdown, 1000);
 
     function DirectionPage() {
-      window.location.href = "Directions.html";
+      window.open("https://maps.google.com/?q=30.108581,31.581996", "_blank");
     }
