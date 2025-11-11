@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="ar">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Invitation</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Playfair+Display:wght@400;700&family=Josefin+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#efe7d7;         
+      --cream:#520b17;      
+      --dark:#5f0b0b;       
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+
+    html,body{
+      height:100%;
+      background:var(--bg);
+      font-family:"Josefin Sans", system-ui, Arial;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+
+    .card{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:4rem 1.5rem;
+    }
+
+    .invite{
+      width:900px;           
+      max-width:92vw;
+      text-align:center;
+      color:var(--cream);
+    }
+
+    /* mfargha */
+
+    .names{
+      font-family:"Cinzel Decorative", serif;
+      font-size:88px;
+      letter-spacing:6px;
+      line-height:0.9;
+      color:transparent;                 
+      -webkit-text-stroke:1.6px var(--dark);
+      text-stroke:1.6px var(--dark);    
+      margin-bottom:1.4rem;
+    }
+
+    /* msh mfargha */
+    /* .names {
+    font-family: "Cinzel Decorative", sans-serif; 
+    font-weight: 700;
+    font-size: 88px;
+    letter-spacing: 6px;
+    line-height: 0.9;
+    color: var(--dark);
+    margin-bottom: 1.4rem;
+    } */
+
+    .intro{
+      font-size:18px;
+      font-weight:300;
+      letter-spacing:4px;
+      text-transform:uppercase;
+      margin:36px 0;
+      color:var(--cream);
+    }
+
+    .date{
+      font-family:"Playfair Display", serif;
+      font-size:120px;
+      font-weight:400;
+      letter-spacing:12px;
+      margin:18px 0;
+      color:var(--cream);
+    }
+
+    .dot{
+      display:inline-block;
+      width:18px;
+      height:18px;
+      border-radius:50%;
+      background:var(--cream);
+      vertical-align:middle;
+      margin:0 12px;
+      transform:translateY(-6px);
+    }
+
+    .time-place{
+      margin-top:28px;
+      font-size:20px;
+      letter-spacing:6px;
+      text-transform:uppercase;
+      color:var(--cream);
+      font-weight:300;
+    }
+
+    /* Countdown styling */
+    .countdown-section {
+      text-align: center;
+      margin-top: 60px;
+      color: var(--cream);
+
+    }
+
+    .countdown-title {
+      font-family: "Playfair Display", serif;
+      font-size: 38px;
+      letter-spacing: 4px;
+      margin-bottom: 20px;
+      color: var(--cream);
+    }
+
+    .countdown {
+      display: flex;
+      justify-content: center;
+      gap: 60px;
+      font-size: 52px;
+      letter-spacing: 2px;
+      color: var(--cream);
+    }
+
+    .countdown div p {
+      font-family: "Playfair Display", serif;
+      margin: 0;
+      
+    }
+
+    .countdown span {
+      display: block;
+      font-size: 16px;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      margin-top: 8px;
+     margin-bottom: 40px;
+
+    }
+
+    .location-section {
+      margin-top: 60px;
+      padding: 40px 0;
+      
+    }
+
+    .location-title {
+      font-family: "Playfair Display", serif;
+      font-size: 28px;
+      letter-spacing: 8px;
+      margin-bottom: 30px;
+      color: var(--cream);
+      text-transform: uppercase;
+      font-weight: 400;
+    }
+
+    .map-container {
+      width: 100%;
+      height: 350px;
+      border-radius: 5px;
+      overflow: hidden;
+      margin: 25px 0;
+      border: 2px solid var(--cream);
+    }
+    .map-link {
+    display: inline-block;
+    margin-top: 20px;
+    background: var(--cream); /* الخلفية تكون حمراء من الأول */
+    color: var(--bg); /* النص يكون بيج */
+    text-decoration: none;
+    font-size: 16px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    border: 1px solid var(--cream);
+    padding: 12px 30px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    font-weight: 300;
+    }
+
+    .map-link:hover {
+    background: var(--bg); /* الخلفية تتحول لبيج */
+    color: var(--cream); /* النص يتحول لأحمر */
+    }
+    .additional-text {
+      font-family: "Josefin Sans", sans-serif;
+      font-size: 18px;
+      line-height: 1.6;
+      margin: 40px 0;
+      color: var(--cream);
+      font-weight: 300;
+      letter-spacing: 1px;
+    }
+
+    @media (max-width:520px){
+      .names{font-size:44px; -webkit-text-stroke:1px;}
+      .date{font-size:56px; letter-spacing:6px;}
+      .intro{font-size:14px}
+      .location-title {font-size: 20px; letter-spacing: 4px;}
+      .map-container {height: 250px;}
+      .additional-text {font-size: 16px;}
+      .time-place{font-size:13px; letter-spacing:3px}
+      .countdown{gap:20px; font-size:28px;}
+      .countdown-title{font-size:20px; }
+    }
+
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="invite">
+      <div class="names">WALEED &amp;<br/>ALAA</div>
+
+      <div class="intro">would like you to join<br/>in their celebration of marriage</div>
+
+      <div class="date">
+        <span>29</span>
+        <span class="dot" aria-hidden="true"></span>
+        <span>11</span>
+        <span class="dot" aria-hidden="true"></span>
+        <span>25</span>
+      </div>
+
+      <div class="time-place">
+        six o'clock in the evening
+        
+      </div>
+         <div class="time-place">
+         The Grove  
+      </div>
+
+     
+
+
+
+      <!-- Location Section - داخل الـ invite -->
+      <div class="location-section">
+        <div class="location-title">Location</div>
+        
+        <div class="additional-text">
+          Join us at The Grove for an unforgettable celebration<br>
+          of love and happiness
+        </div>
+
+        <div class="map-container">
+          <iframe 
+            src="https://maps.google.com/maps?q=30.108581,31.581996&z=16&output=embed"
+            width="100%" 
+            height="100%" 
+            style="border:0;" 
+            allowfullscreen
+            loading="lazy">
+          </iframe>
+        </div>
+        
+        <a href="https://maps.google.com/?q=30.108581,31.581996" 
+           target="_blank" 
+           class="map-link">
+          View on Google Maps
+        </a>
+      </div>
+
+
+              <!-- Countdown -->
+      <div class="countdown-section">
+        <h2 class="countdown-title">Countdown to the Big Day!</h2>
+        <div class="countdown" id="countdown">
+          <div><p id="days">00</p><span>Days</span></div>
+          <div><p id="hours">00</p><span>Hours</span></div>
+          <div><p id="minutes">00</p><span>Minutes</span></div>
+          <div><p id="seconds">00</p><span>Seconds</span></div>
+        </div>
+
+        <div class="additional-text">
+        We can't wait to celebrate this special moment with you<br>
+        Your presence is the most valuable gift to us
+      </div>
+      </div>
+
+
+    </div> <!-- إغلاق الـ invite -->
+  </div> <!-- إغلاق الـ card -->
+
+
+
+  <script src="Main.js"> </script>
+</body>
+</html>
