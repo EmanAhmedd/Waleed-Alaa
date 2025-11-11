@@ -170,8 +170,8 @@
     .map-link {
     display: inline-block;
     margin-top: 20px;
-    background: var(--cream); /* الخلفية تكون حمراء من الأول */
-    color: var(--bg); /* النص يكون بيج */
+    background: var(--cream); 
+    color: var(--bg); 
     text-decoration: none;
     font-size: 16px;
     letter-spacing: 3px;
@@ -182,10 +182,30 @@
     transition: all 0.3s ease;
     font-weight: 300;
     }
+     .btn {
+    display: inline-block;
+    margin-top: 20px;
+    background: var(--cream); 
+    color: var(--bg); 
+    text-decoration: none;
+    font-size: 16px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    border: 1px solid var(--cream);
+    padding: 12px 30px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    font-weight: 300;
+    font-family: "Playfair Display", serif;
+    }
 
     .map-link:hover {
-    background: var(--bg); /* الخلفية تتحول لبيج */
-    color: var(--cream); /* النص يتحول لأحمر */
+    background: var(--bg); 
+    color: var(--cream); 
+    }
+     .btn:hover {
+    background: var(--bg); 
+    color: var(--cream); 
     }
     .additional-text {
       font-family: "Josefin Sans", sans-serif;
@@ -238,7 +258,7 @@
 
 
 
-      <!-- Location Section - داخل الـ invite -->
+      <!-- Location Section  -->
       <div class="location-section">
         <div class="location-title">Location</div>
         
@@ -263,6 +283,14 @@
            class="map-link">
           View on Google Maps
         </a>
+          <a onclick="DirectionPage()"
+           target="_blank" 
+           class="map-link">
+          Specific Location
+        </a>
+       
+
+       
       </div>
 
 
@@ -283,8 +311,8 @@
       </div>
 
 
-    </div> <!-- إغلاق الـ invite -->
-  </div> <!-- إغلاق الـ card -->
+    </div> 
+  </div> 
 
 
 
