@@ -18,6 +18,7 @@
   src: url('https://cdn.jsdelivr.net/npm/@fontsource/cinzel-decorative@4.5.0/files/cinzel-decorative-latin-400-normal.woff2') format('woff2');
   font-weight: 400;
   font-display: swap;
+  unicode-range: U+0000-00FF; /* عشان يحمل أسرع */
 }
 
 @font-face {
@@ -25,8 +26,8 @@
   src: url('https://cdn.jsdelivr.net/npm/@fontsource/cinzel-decorative@4.5.0/files/cinzel-decorative-latin-700-normal.woff2') format('woff2');
   font-weight: 700;
   font-display: swap;
+  unicode-range: U+0000-00FF;
 }
-
 /* Playfair Display */
 @font-face {
   font-family: 'Playfair Display';
@@ -97,16 +98,17 @@
 
     /* mfargha */
 
-    .names{
-      font-family:"Cinzel Decorative", serif;
-      font-size:88px;
-      letter-spacing:6px;
-      line-height:0.9;
-      color:transparent;                 
-      -webkit-text-stroke:1.6px var(--dark);
-      margin-bottom:1.4rem;
-       font-display: swap;
-    }
+.names{
+  font-family:"Cinzel Decorative", serif;
+  font-size: clamp(48px, 12vw, 88px); /* يتغير حسب حجم الشاشة */
+  letter-spacing: clamp(2px, 1vw, 6px);
+  line-height: 0.9;
+  color: var(--dark); /* بدل transparent */
+  -webkit-text-fill-color: transparent; /* ده الصح لـ Safari */
+  -webkit-text-stroke: 1px var(--dark); /* خففنا الـ stroke */
+  margin-bottom: 1.4rem;
+  font-display: swap;
+}
 
     /* msh mfargha */
     /* .names {
