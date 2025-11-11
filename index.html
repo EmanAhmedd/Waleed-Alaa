@@ -206,6 +206,26 @@
 
     }
 
+
+    .countdown h2 {
+      font-size: 40px;
+      margin-bottom: 30px;
+    }
+
+    .timer {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .time-box {
+      background: rgba(221, 198, 156, 0.24);
+      border-radius: 10px;
+      padding: 15px 25px;
+      font-size: 30px;
+    }
+
     .location-section {
       margin-top: 60px;
       padding: 40px 0;
@@ -222,7 +242,7 @@
       font-weight: 400;
     }
     .location-title i {
-      font-size: 32px;  /* حجم الأيقونة */
+      font-size: 25px;  
     }
 
     .map-container {
@@ -248,31 +268,12 @@
     transition: all 0.3s ease;
     font-weight: 300;
     }
-     .btn {
-    display: inline-block;
-    margin-top: 20px;
-    background: var(--cream); 
-    color: var(--bg); 
-    text-decoration: none;
-    font-size: 16px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    border: 1px solid var(--cream);
-    padding: 12px 30px;
-    border-radius: 25px;
-    transition: all 0.3s ease;
-    font-weight: 300;
-    font-family: "Playfair Display", serif;
-    }
 
     .map-link:hover {
     background: var(--bg); 
     color: var(--cream); 
     }
-     .btn:hover {
-    background: var(--bg); 
-    color: var(--cream); 
-    }
+
     .additional-text {
       font-family: "Josefin Sans", sans-serif;
       font-size: 18px;
@@ -363,12 +364,12 @@
               <!-- Countdown -->
       <div class="countdown-section">
         <h2 class="countdown-title">Countdown to the Big Day!</h2>
-        <div class="countdown" id="countdown">
-          <div><p id="days">00</p><span>Days</span></div>
-          <div><p id="hours">00</p><span>Hours</span></div>
-          <div><p id="minutes">00</p><span>Minutes</span></div>
-          <div><p id="seconds">00</p><span>Seconds</span></div>
-        </div>
+        <div class="timer" id="countdown">
+      <div class="time-box" id="days">0d</div>
+      <div class="time-box" id="hours">0h</div>
+      <div class="time-box" id="minutes">0m</div>
+      <div class="time-box" id="seconds">0s</div>
+    </div>
 
         <div class="additional-text">
         We can't wait to celebrate this special moment with you<br>
