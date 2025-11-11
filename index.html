@@ -66,9 +66,9 @@
 }
 
     :root{
-      --bg:#efe7d7;         
-      --cream:#520b17;      
-      --dark:#5f0b0b;       
+      --bg:  #520b17;         
+      --cream:#efe7d7;      
+      --dark:#efe7d7;       
     }
 
     *{box-sizing:border-box;margin:0;padding:0}
@@ -100,14 +100,16 @@
 
 .names{
   font-family:"Cinzel Decorative", serif;
-  font-size: clamp(48px, 12vw, 88px); /* يتغير حسب حجم الشاشة */
+  font-size: clamp(48px, 12vw, 88px);
   letter-spacing: clamp(2px, 1vw, 6px);
   line-height: 0.9;
-  color: var(--dark); /* بدل transparent */
-  -webkit-text-fill-color: transparent; /* ده الصح لـ Safari */
-  -webkit-text-stroke: 1px var(--dark); /* خففنا الـ stroke */
+  color: var(--dark); 
+  -webkit-text-fill-color: transparent; 
+  -webkit-text-stroke: 1px var(--dark);
   margin-bottom: 1.4rem;
-  font-display: swap;
+  /* font-display: swap; */
+   size-adjust: 100%; 
+  font-size-adjust: none;
 }
 
     /* msh mfargha */
