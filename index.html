@@ -10,6 +10,9 @@
 <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Playfair+Display:wght@400;700&family=Josefin+Sans:wght@300;400;700&display=swap" rel="stylesheet"> -->
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
   <style>
     
      /* Cinzel Decorative */
@@ -68,7 +71,8 @@
     :root{
       --bg:  #520b17;         
       --cream:#efe7d7;      
-      --dark:#efe7d7;       
+      --dark:#efe7d7;   
+      --olive:#5D563C;    
     }
 
     *{box-sizing:border-box;margin:0;padding:0}
@@ -149,8 +153,7 @@
       background:var(--cream);
       vertical-align:middle;
       margin:0 12px;
-      transform:translateY(-6px);
-    }
+ vertical-align: baseline;    }
 
     .time-place{
       margin-top:28px;
@@ -216,6 +219,9 @@
       color: var(--cream);
       text-transform: uppercase;
       font-weight: 400;
+    }
+    .time-place i {
+      font-size: 32px;  /* حجم الأيقونة */
     }
 
     .map-container {
@@ -309,8 +315,8 @@
         six o'clock in the evening
         
       </div>
-         <div class="time-place">
-         The Grove  
+      <div class="time-place"><i class="fas fa-map-marker-alt"></i> 
+            The Grove  
       </div>
 
      
