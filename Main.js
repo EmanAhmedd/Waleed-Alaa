@@ -1,4 +1,5 @@
-    const weddingDate = new Date("Nov 29, 2025 18:00:00").getTime();
+const weddingDate = new Date("Nov 29, 2025 00:00:00").getTime();
+
 
     function updateCountdown() {
       const now = new Date().getTime();
@@ -19,12 +20,10 @@
       // document.getElementById("seconds").textContent = seconds + "s";
     }
 
-    // شغله أول مرة على طول
     updateCountdown();
 
-    // بعدين كل ثانية
     setInterval(updateCountdown, 1000);
 
     function DirectionPage() {
-      window.open("https://maps.google.com/?q=30.108581,31.581996", "_blank");
+      window.location.href = "Directions.html";
     }

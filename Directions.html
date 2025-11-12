@@ -5,11 +5,8 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Invitation</title>
 
-  <!-- Google Fonts -->
-  <!-- <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Playfair+Display:wght@400;700&family=Josefin+Sans:wght@300;400;700&display=swap" rel="stylesheet"> -->
-
   <style>
-     @font-face {
+    @font-face {
       font-family: 'Cinzel Decorative';
       src: url('fonts/CinzelDecorative-Regular.ttf') format('truetype');
       font-weight: normal;
@@ -51,52 +48,58 @@
       font-style: normal;
     }
 
-    :root{
-      --bg:#efe7d7;         
-      --cream:#520b17;      
-      --dark:#5f0b0b;       
+    :root {
+      --bg: #efe7d7;         
+      --cream: #520b17;      
+      --dark: #5f0b0b;       
     }
 
-    *{box-sizing:border-box;margin:0;padding:0}
-
-    html,body{
-      height:100%;
-      background:var(--bg);
-      font-family:"Josefin Sans", system-ui, Arial;
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
+
+    html, body {
+      height: 100%;
+      background: var(--bg);
+      font-family: "Josefin Sans", system-ui, Arial;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
     .video-container {
-  width: 100%;
-  max-width: 600px;
-  margin: 0 auto;
-}
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+    }
 
-.video-mobile {
-  width: 100%;
-  height: auto;
-}
+    .video-mobile {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
 
-
+    .map-image {
+      display: block;
+      width: 100%;         /* نفس عرض الفيديو بالضبط */
+      height: auto;
+      margin-top: 20px;    /* مسافة بسيطة بين الفيديو والصورة */
+      border-radius: 10px; /* اختياري */
+    }
   </style>
 </head>
 <body>
 
-<div class="video-container">
-  <video class="video-mobile" controls muted loop playsinline>
-    <source src="Assets/Video2.mp4" type="video/mp4">
+  <div class="video-container">
+    <video class="video-mobile" controls muted loop playsinline>
+      <source src="Assets/Video2.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
 
-    Your browser does not support the video tag.
-  </video>
-</div>
-        <img  src="Assets/DirectionMap.jpg" style="width:900px; height:700 ; margin-top:0px;"/>
-
-
-
-    </div> 
+    <img src="Assets/DirectionMap.jpg" class="map-image" alt="Direction Map" />
   </div>
-
-
 
 </body>
 </html>
