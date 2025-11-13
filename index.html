@@ -217,6 +217,12 @@
       margin: 25px 0;
       border: 2px solid var(--cream);
     }
+    .map-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
 
     .map-link {
       display: inline-block;
@@ -369,7 +375,7 @@
       </div>
 
       <div class="time-place">
-        six o'clock in the evening
+        4:30 PM
       </div>
       <div class="time-place">
         The Grove  
@@ -384,15 +390,17 @@
           of love and happiness
         </div>
 
-        <div class="map-container">
-          <iframe 
+        <div class="map-container map-image">
+          <!-- <iframe 
             src="https://maps.google.com/maps?q=30.108581,31.581996&z=16&output=embed"
             width="100%" 
             height="100%" 
             style="border:0;" 
             allowfullscreen
             loading="lazy">
-          </iframe>
+          </iframe> -->
+              <img src="Assets/DirectionMap.jpg" class="map-image" alt="Direction Map" />
+
         </div>
         
         <a href="https://maps.google.com/?q=30.108581,31.581996" 
